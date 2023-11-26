@@ -22,7 +22,7 @@
           <header>
                <!--NAV BAR-->
                <nav class="navbar">
-                    <a href="/" class="nav-branding nav-link" >cardgame.</a>
+                    <a href="/" class="nav-branding nav-link" >retrogames.</a>
                     <ul class="nav-menu">
                          {% if user.is_anonymous %}
                               <li class="nav-item">
@@ -35,13 +35,13 @@
                               </li>
                          {% endif %}
                          <li class="nav-item">
-                              <a href="/" class="nav-link">KEZDŐLAP</a>
+                              <a href="/" class="nav-link">HOME</a>
                          </li>
                          <li class="nav-item">
-                              <a href="/games" class="nav-link">JÁTÉKOK</a>
+                              <a href="/games" class="nav-link">GAMES</a>
                          </li>
                          <li class="nav-item">
-                              <a href="/leaderboard" class="nav-link">EREDMÉNYTÁBLA</a>
+                              <a href="/leaderboard" class="nav-link">LEADERBOARD</a>
                          </li>
                     </ul>
                     <div class="hamburger">
@@ -55,14 +55,20 @@
           
           <div class="section-1 box" style="display: flex;  justify-content: center; align-items: center;">
                <div class="mainTitle">
-                    <h1>Where nostalgia meets strategy!</h1>
+                    
+                         {% if user.is_authenticated %}
+                              <h1>Hi {{ user.username }}!</h1>
+                    {% endif %}
+                         {% if not user.is_authenticated %}
+                              <h1>Where nostalgia meets strategy!</h1>
+                    {% endif %}
                </div>  
           </div>
                
           <div class="section-2 box">
                <a  href="/games"><h1>FEATURED GAMES</h1></a>
                {% if user.is_authenticated %}
-                    <p>Hi {{ user.username }}! Have you tried our games yet?</p>
+                    <p>{{ user.username }}, Have you tried our games yet?</p>
                {% endif %}
                <p>
                     <a href="/tictactoe"><h2>Tic-Tac-Toe</h2></a>
@@ -82,11 +88,10 @@
                     Our first thought was games. This website is not only games, it is so much more than that.
                     We are making a mark in history (at least in our history) and if this is our first try,
                     imagine what we could do in a lifetime worth of work.
-                    VALAMIVALAMI VALAMI
+                    
                </p>
           </div>
 
           
-
      </body>
 </html>

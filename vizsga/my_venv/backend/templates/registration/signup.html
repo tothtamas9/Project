@@ -20,16 +20,16 @@
         <header>
             <!--NAV BAR-->
             <nav class="navbar">
-                 <a href="/" class="nav-branding nav-link" >cardgame.</a>
+                 <a href="/" class="nav-branding nav-link" >retrogames.</a>
                  <ul class="nav-menu">
                       <li class="nav-item">
-                           <a href="/" class="nav-link">KEZDŐLAP</a>
+                           <a href="/" class="nav-link">HOME</a>
                       </li>
                       <li class="nav-item">
-                           <a href="/games" class="nav-link">JÁTÉKOK</a>
+                           <a href="/games" class="nav-link">GAMES</a>
                       </li>
                       <li class="nav-item">
-                           <a href="/leaderboard" class="nav-link">EREDMÉNYTÁBLA</a>
+                           <a href="/leaderboard" class="nav-link">LEADERBOARD</a>
                       </li>
                  </ul>
                  <div class="hamburger">
@@ -41,12 +41,14 @@
        </header>
        <script src="{% static 'js/cardgame-nav-bar.js' %}"></script>
 
-       
+       <div id="parentDiv">
        <h2>Sign up</h2>
        <form method="post">
             {% csrf_token %}
             {{ form.as_p }}
-            <button type="submit">Sign Up</button>
+            <button class="Btn" type="submit">Sign Up</button>
        </form>
+     </div>
+     <script src="{% static 'js/login.js'  %}"></script>
     </body>
 </html>

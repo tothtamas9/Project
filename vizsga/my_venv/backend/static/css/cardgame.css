@@ -24,10 +24,10 @@
      width: 550px;
      height: 200px;
      background: 0, 0, 0, 0.8;
-     backdrop-filter: blur(2px);
+     backdrop-filter: blur(2vw);
      color: white;
      font-size: 48px;
-     border-radius: 150px;
+     border-radius: 3rem;
      border: 1px;
      box-shadow: 0px, 0px, 16px, 0px rgba(0, 0, 0, 0.5);
 
@@ -73,4 +73,5 @@
      font-size: 40px;
      text-shadow: 0px 0px 5px #000000;
 }
+
 

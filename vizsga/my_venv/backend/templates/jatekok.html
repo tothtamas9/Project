@@ -19,17 +19,17 @@
           <header>
                <!--NAV BAR-->
                <nav class="navbar">
-                    <a href="/" class="nav-branding nav-link" >cardgame.</a>
+                    <a href="/" class="nav-branding nav-link" >retrogames.</a>
 
                     <ul class="nav-menu">
                          <li class="nav-item">
-                              <a href="/" class="nav-link">KEZDŐLAP</a>
+                              <a href="/" class="nav-link">HOME</a>
                          </li>
                          <li class="nav-item">
-                              <a href="/games" class="nav-link">JÁTÉKOK</a>
+                              <a href="/games" class="nav-link">GAMES</a>
                          </li>
                          <li class="nav-item">
-                              <a href="/leaderboard" class="nav-link">EREDMÉNYTÁBLA</a>
+                              <a href="/leaderboard" class="nav-link">LEADERBOARD</a>
                          </li>
                     </ul>
                     <div class="hamburger">
@@ -40,42 +40,19 @@
                </nav>
           </header>
           <script src="{% static 'js/cardgame-nav-bar.js' %}"></script>
+
           
 
-          <section class="container">
-               <div class="slider-wrapper">
-                    <div class="slider">
-                    <a href="/snake"><img id="slide-1" src="{% static 'img/snake-game2.png' %}" alt="Snake image" /></a>
-                    <a href="/tictactoe"> <img id="slide-2" src="{% static 'img/hello-world.webp' %}" alt="Tic-Tac-Toe game image" /></a>
-
-
-                    </div>
-                    <div class="slider-nav">
-                         <a class="sldButtons" href="#slide-1"></a>
-                         <a class="sldButtons" href="#slide-2"></a>
-                    </div>
+          <div class="container">
+               <div class="box">
+                   <a href="/tictactoe"> <img class="kep" src="{% static 'img/twoplayermode.jpg' %}"alt="twoplayermode" style="max-width: 25rem;
+                    height: auto;"></a>
                </div>
-          </section>
-          <!-- 4 section 2 pics and 2 text bars version-->
-          {% comment %} <div class="section-1 box"><h1>Where nostalgia meets strategy!</h1></div>
-          <div class="section-2 box">
-               <a  href="/Tictactoe/tictactoe.html"><h1>TIC-TAC-TOE</h1></a>
-               <p>
-                    "Snake" is an addictive and timeless classic that has captured the hearts of gamers 
-                    for generations. In this thrilling game, players control a pixelated serpent that 
-                    constantly grows as it devours colorful, glowing orbs scattered across the screen. 
-                    The goal? To guide your snake through a maze of obstacles and avoid self-collision 
-                    at all costs.
-               </p>
-          </div>
-          <div class="section-3 box"></div>
-          <div class="section-4 box"><a  href="/Snake/snake.html"><h1>SNAKE</h1></a>
-               <p>
-                    Tic Tac Toe, the ultimate game of strategy and wits, awaits you on our website!
-                    With its iconic 3x3 grid, this classic game offers endless fun for players of 
-                    all skill levels. Challenge our AI opponent in a battle for victory.
-               </p>
-          </div> {% endcomment %}
+               <div class="box">
+                    <a href="/snake"><img class="kep" src="{% static 'img/oneplayermode.jpg' %}" alt="oneplayermode" style="max-width: 25rem;
+                    height: auto;"></a>
+               </div>
+     
           
      </body>
 
