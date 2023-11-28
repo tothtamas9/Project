@@ -1,0 +1,77 @@
+/* Import Google font */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+
+* {
+     padding: 0px;
+     margin: 0px;
+     box-sizing: border-box;
+}
+
+.box {
+     width: 100%;
+     height: 600px;
+     padding: 40px 60px;
+     color: white;
+     font-family: sans-serif;
+     text-align: center;
+}
+
+.mainTitle {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+
+     width: 550px;
+     height: 200px;
+     background: 0, 0, 0, 0.8;
+     backdrop-filter: blur(2vw);
+     color: white;
+     font-size: 48px;
+     border-radius: 3rem;
+     border: 1px;
+     box-shadow: 0px, 0px, 16px, 0px rgba(0, 0, 0, 0.5);
+
+}
+
+.section-1 {
+     height: 100vh;
+     background-image: url("/static/img/3.png");
+
+     background-attachment: fixed;
+     background-size: cover;
+     background-position: center;
+     background-size: cover;
+     border: solid 2px rgb(0, 0, 0);
+}
+
+.section-2 {
+     background: #202020;
+     border: solid 2px rgb(0, 0, 0);
+}
+
+.section-3 {
+     background-image: url("/static/img/ben-neale-zpxKdH_xNSI-unsplash.jpg");
+     background-attachment: fixed;
+     background-size: cover;
+     background-position: center;
+     background-size: cover;
+     border: solid 2px rgb(0, 0, 0);
+}
+
+.section-4 {
+     background: #202020;
+     border: solid 2px rgb(0, 0, 0);
+}
+
+.box p {
+     font-size: 20px;
+     margin-top: 100px;
+     text-shadow: 0px 0px 5px #000000;
+}
+
+.box h1 {
+     font-size: 40px;
+     text-shadow: 0px 0px 5px #000000;
+}
+
+
