@@ -5,7 +5,7 @@ header {
 }
 
 header {
-  background-color: rgb(57, 57, 57);
+  background-color: #38b6ff ;
 }
 
 li {
@@ -41,11 +41,11 @@ a {
 
 .nav-link {
   transition: 0.2s ease;
-  color: rgb(255, 255, 255);
+  color: #004aad(255, 255, 255);
 }
 
 .nav-link:hover {
-  color: rgb(160, 160, 160);
+  color: white;
 }
 
 .hamburger {
@@ -86,7 +86,7 @@ a {
     top: 70px;
     gap: 0;
     flex-direction: column;
-    background-color: rgb(67, 67, 67);
+    background-color: #3096d0;
     width: 100%;
     text-align: center;
     transition: 0.3s;
@@ -112,7 +112,5 @@ a {
 }
 
 .navbar h2{
-  color: azure;
+  color: #004aad;
 }
-
-/*product slider*/

@@ -17,11 +17,11 @@
  }
  h1 {
     font-size: 54px;
-    font-family: 'Finger Paint', cursive;
+    font-family: Nova Square;
 
  }
  p{
-    font-family: 'Finger Paint', cursive;
+    font-family:  Nova Square;
  }
 
  .container {
@@ -31,7 +31,7 @@
      justify-content: center;
      align-items: center;
      flex-direction: column;
-     background-color: #ff0000;
+     background-color: #004aad;
      
  }
  
@@ -40,11 +40,11 @@
      display: flex;
      flex-wrap: wrap;
      margin-top: 40px;
-    background-color: #212837;
+    background-color: #38b6ff;
  }
 
  .box {
-    font-family: 'Finger Paint', cursive;
+    font-family: Nova Square;
      height: 100px;
      width: 100px;
      display: flex;
