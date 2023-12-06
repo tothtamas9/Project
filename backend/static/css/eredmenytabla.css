@@ -1,3 +1,29 @@
 *{
      font-family: Nova Square;;
 }
+
+body{
+     background-color: black;
+}
+
+.high-score-card{
+     box-shadow: 0 4px 8px 0 #3096d0;;
+     transition: 0.3s;
+     border-radius: 5px;
+     color: #38b6ff;;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     padding: 5vh;
+}
+.high-score-card:hover {
+     box-shadow: 0 8px 16px 0 #d08b30;;
+}
+
+table, th, td{
+     border: 1px solid white;
+}
+
+td{
+     text-align: center;
+}
