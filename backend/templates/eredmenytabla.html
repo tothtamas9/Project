@@ -49,17 +49,21 @@
     <div class="high-score-card">
         <table>
             <tr>
-              <th>Name</th>
-              <th>Game</th>
-              <th>High score</th>
+                <th>ID</th>
+                <th>Name</th>
+                <th>High score</th>
+                <th>Date joined</th>
             </tr>
             <tr>
-              <td>{{ user.username }}</td>
-              <td>Snake</td>
-              <td class="high-score"></td>
+                <td>{{ user.id }}</td>
+                <td>{{ user.username }}</td>
+                <td class="high-score"></td>
+                <td>{{ request.user.date_joined }}</td>
             </tr>
-          </table>
+
+        </table>
     </div>
     <script src="{% static 'js/highscore.js'  %}"></script>
 </body>
+
 </html>

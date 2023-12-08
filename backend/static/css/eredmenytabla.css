@@ -1,29 +1,30 @@
-*{
-     font-family: Nova Square;;
+* {
+     font-family: Nova Square;
 }
 
-body{
+body {
      background-color: black;
 }
 
-.high-score-card{
-     box-shadow: 0 4px 8px 0 #3096d0;;
+.high-score-card {
+     box-shadow: 0 4px 8px 0 #3096d0;
      transition: 0.3s;
      border-radius: 5px;
-     color: #38b6ff;;
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     padding: 5vh;
+     color: #38b6ff;
+     padding: 10px;
+     margin: 10px;
+     max-width: 26rem;
 }
+
 .high-score-card:hover {
-     box-shadow: 0 8px 16px 0 #d08b30;;
+     box-shadow: 0 8px 16px 0 #d08b30;
 }
 
-table, th, td{
-     border: 1px solid white;
-}
-
-td{
+table{
      text-align: center;
+}
+
+th, tr, td{
+     border: 2px solid white;
+     padding: 10px;
 }
