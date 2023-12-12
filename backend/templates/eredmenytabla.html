@@ -46,24 +46,24 @@
         </nav>
     </header>
     <script src="{% static 'js/cardgame-nav-bar.js' %}"></script>
+    {% for score in scores %}
     <div class="high-score-card">
         <table>
             <tr>
                 <th>ID</th>
                 <th>Name</th>
                 <th>High score</th>
-                <th>Date joined</th>
+                <th>Date earned</th>
             </tr>
             <tr>
-                <td>{{ user.id }}</td>
-                <td>{{ user.username }}</td>
-                <td class="high-score"></td>
-                <td>{{ request.user.date_joined }}</td>
+                <td>{{ score.user_id }}</td>
+                <td>{{ score.user }}</td>
+                <td>{{score.score_value}}</td>
+                <td>{{ score.date }}</td>
             </tr>
-
         </table>
     </div>
-    <script src="{% static 'js/highscore.js'  %}"></script>
+    {% endfor %}
 </body>
 
 </html>

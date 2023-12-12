@@ -6,5 +6,6 @@ urlpatterns = [
     path("games/", views.games, name="games"), 
     path("leaderboard/", views.leaderboard, name="leaderboard"), 
     path("snake/", views.snake, name="snake"), 
-    path("tictactoe/", views.tictactoe, name="tictactoe"), 
+    path("tictactoe/", views.tictactoe, name="tictactoe"),
+    path("setscore/<int:score>", views.setScore),
 ]

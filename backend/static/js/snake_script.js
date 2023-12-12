@@ -25,6 +25,8 @@ const handleGameOver = () => {
     // Számláló nullázása és oldal újratöltése
     clearInterval(setIntervalId);
     alert("Game Over! Az újrakezdéshez kattints az OK gombra!");
+    
+    fetch(`/setscore/${score}`).then(res => console.log(res))
     location.reload();
 }
 
