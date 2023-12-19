@@ -12,10 +12,7 @@ def games(request):
 
 @login_required
 def leaderboard(request):
-    scores = Score.objects.all()
-
-    # sort scores
-
+    scores = Score.objects.all().order_by('-score_value')
     return render(request, "eredmenytabla.html", {"scores":scores})
 
 @login_required
