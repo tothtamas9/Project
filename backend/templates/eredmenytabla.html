@@ -16,8 +16,8 @@
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="{% static 'css/cardgame-nav-bar.css' %}">
-    <link rel="stylesheet" href="{% static 'css/eredmenytabla.css' %}">
+        <link rel="stylesheet" href="{% static 'css/cardgame-nav-bar.css' %}">
+        <link rel="stylesheet" href="{% static 'css/eredmenytabla.css' %}">
     <title>Eredménytábla</title>
 </head>
 
@@ -46,24 +46,41 @@
         </nav>
     </header>
     <script src="{% static 'js/cardgame-nav-bar.js' %}"></script>
-    {% for score in scores %}
+
     <div class="high-score-card">
-        <table>
+        <table id="score_table">
             <tr>
                 <th>ID</th>
                 <th>Name</th>
                 <th>High score</th>
                 <th>Date earned</th>
             </tr>
-            <tr>
-                <td>{{ score.user_id }}</td>
-                <td>{{ score.user }}</td>
-                <td>{{score.score_value}}</td>
-                <td>{{ score.date }}</td>
-            </tr>
         </table>
     </div>
-    {% endfor %}
+
+    <script>
+        let table = document.getElementById("score_table")
+
+        
+
+        fetch("/api/scores/")
+        .then(res => res.json())
+        .then(data => {
+            
+            data.forEach( score =>  {
+                console.log(data);
+                let d = new Date(score.date)
+
+                table.innerHTML += `
+                <tr>
+                    <td>${ score.user.id }</td>
+                    <td>${ score.user.username }</td>
+                    <td>${ score.score_value}</td>
+                    <td>${ `${d.getFullYear()} - ${d.getMonth() + 1 } - ${d.getDay()}` }</td>
+                </tr>`
+            })
+        })
+    </script>
 </body>
 
 </html>

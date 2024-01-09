@@ -7,6 +7,10 @@ body{
      
 }
 
+header{
+     position: static;
+}
+
 #container{
      margin-top: 15vw;
      display: grid;

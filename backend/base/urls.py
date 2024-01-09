@@ -8,4 +8,5 @@ urlpatterns = [
     path("snake/", views.snake, name="snake"), 
     path("tictactoe/", views.tictactoe, name="tictactoe"),
     path("setscore/<int:score>", views.setScore),
+    path('api/scores/', views.getScores)
 ]

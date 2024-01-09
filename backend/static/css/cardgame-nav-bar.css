@@ -5,7 +5,9 @@ header {
 }
 
 header {
-  background-color: #38b6ff ;
+  background-color: #38b6ff;
+  position: fixed;
+  width: 100vw;
 }
 
 li {

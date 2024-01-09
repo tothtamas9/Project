@@ -5,25 +5,37 @@
 body {
      background-color: black;
 }
+header{
+     position: static;
+}
+
 
 .high-score-card {
      box-shadow: 0 4px 8px 0 #3096d0;
      transition: 0.3s;
      border-radius: 5px;
      color: #38b6ff;
-     padding: 10px;
-     margin: 10px;
+     
      max-width: 26rem;
      cursor: pointer;
-}
 
+margin-left: auto;
+margin-right: auto;
+margin-top: 5rem;
+}
 .high-score-card:hover {
-     box-shadow: 0 8px 16px 0 #d08b30;
+     box-shadow: 0 8px 16px 0 #38b6ff
 }
 
 table{
      text-align: center;
+     color: #3096d0;
+
+     
+     
 }
+
+
 
 th, tr, td{
      border: 2px solid white;
