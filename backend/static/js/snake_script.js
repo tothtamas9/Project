@@ -11,18 +11,18 @@ let snakeBody = [];
 let setIntervalId;
 let score = 0;
 
-// High score megszerzése helyi tárolóból 
+// Get high score from local storage
 let highScore = localStorage.getItem("high-score") || 0;
 highScoreElement.innerText = `High Score: ${highScore}`;
 
 const updateFoodPosition = () => {
-    // Kaja pozíciója 
+    // Food position
     foodX = Math.floor(Math.random() * 30) + 1;
     foodY = Math.floor(Math.random() * 30) + 1;
 }
 
 const handleGameOver = () => {
-    // Számláló nullázása és oldal újratöltése
+    // Set counter to 0 and reload page
     clearInterval(setIntervalId);
     alert("Game Over! Az újrakezdéshez kattints az OK gombra!");
     
@@ -31,7 +31,7 @@ const handleGameOver = () => {
 }
 
 const changeDirection = e => {
-    // Mozgás gombnyomásra
+    // Move on button press
     if (e.key === "ArrowUp" && velocityY != 1) {
         velocityX = 0;
         velocityY = -1;

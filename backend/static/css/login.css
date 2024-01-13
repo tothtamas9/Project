@@ -1,66 +1,70 @@
-/* Import Google font */
+/* Google font */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
 
-*{
-    padding: 0px;
-    margin:0px;
-    box-sizing: border-box;
-    font-family: Nova Square;
-    
-    color: white;
-}
-body{
-    background-color: #3096d0;
-}
-h2{
-    font-weight: 500;
-    margin-top: 15px;
-    color: black;
-    font-weight: bold;
+/* Same CSS as registration */
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: Nova Square;
+  color: white;
 }
 
-#id_password2, #id_password1, #id_password, #id_username{
-color: #000;
-    border-color: #000;
-    border: 2px solid black;
+body {
+  background-color: #3096d0;
+}
+
+h2 {
+  font-weight: 500;
+  margin-top: 15px;
+  color: black;
+  font-weight: bold;
+}
+
+#id_password2, #id_password1, #id_password, #id_username {
+  color: #000;
+  border-color: #000;
+  border: 2px solid black;
   border-radius: 4px;
 }
+
 #parentDiv {
-    color: black;
-    min-height: 70vh;
-display: flex;
-gap: 20px;
-justify-content: center;
-align-items: center;
-flex-direction: column;
-
-}
-#parentDiv form{
-    display: flex;
-    flex-direction: column;
-    
+  color: black;
+  min-height: 70vh;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-#parentDiv form input{
-    display: block;
-    margin-bottom: 20px;
+#parentDiv form {
+  display: flex;
+  flex-direction: column;
+}
+
+#parentDiv form input {
+  display: block;
+  margin-bottom: 20px;
 }
 
 label {
-    color: white;
+  color: white;
 }
 
-.helptext{
-    font-size: small;
-    color: #000;
+/* Username creation requirement text */
+.helptext {
+  font-size: small;
+  color: #000;
 }
 
-li{
-    color: #000;
-    font-size: small;
+/* Password creation requirement text */
+li {
+  color: #000;
+  font-size: small;
 }
 
-/*     -- ---  button  --  ---- -  */
+/* Login and Signup button */
 .button {
   align-items: center;
   background-color: #3096d0;
@@ -70,7 +74,7 @@ li{
   cursor: pointer;
   display: inline-flex;
   fill: #000;
-  font-family: Inter,sans-serif;
+  font-family: Inter, sans-serif;
   font-size: 16px;
   font-weight: 600;
   height: 48px;

@@ -29,6 +29,7 @@
                     <li class="nav-item">
                          <a href="/" class="nav-link">HOME</a>
                     </li>
+                    <!-- Pages -->
                     <li class="nav-item">
                          <a href="/games" class="nav-link">GAMES</a>
                     </li>
@@ -36,6 +37,7 @@
                          <a href="/leaderboard" class="nav-link">LEADERBOARD</a>
                     </li>
                </ul>
+               <!-- Responsive hamburger -->
                <div class="hamburger">
                     <span class="bar"></span>
                     <span class="bar"></span>
@@ -44,20 +46,18 @@
           </nav>
      </header>
      <script src="{% static 'js/cardgame-nav-bar.js' %}"></script>
-
+     <!-- Login window -->
      <div id="parentDiv">
-               <h2>Log In</h2>
-               <form method="post">
-                    
-                         {% csrf_token %}
-                         
-                              {{ form.as_table }}
-                         
-                    <button class="button" type="submit">Log In</button>
-               </form>
-          </div>
+          <h2>Log In</h2>
+          <form method="post">
 
-     <script src="{% static 'js/login.js'  %}"></script>
+               {% csrf_token %}
+
+               {{ form.as_table }}
+
+               <button class="button" type="submit">Log In</button>
+          </form>
+     </div>
 </body>
 
 </html>

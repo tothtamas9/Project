@@ -20,22 +20,18 @@
      <link rel="stylesheet" href="{% static 'css/tictactoe.css' %}">
      <link rel="stylesheet" href="{% static 'js/tictactoe.js' %}">
 
-     
+
      <title>TicTacToe</title>
 </head>
 <header>
      <!--NAV BAR-->
      <nav class="navbar">
-          <a href="/" class="nav-branding nav-link" >retrogames.</a>
+          <a href="/" class="nav-branding nav-link">retrogames.</a>
           <ul class="nav-menu">
-               {% if user.is_anonymous %}
-                    <li class="nav-item">
-                         <a href="{% url 'login' %}" class="nav-link">LOG IN</a>
-                    </li>
-               {% endif %}
                <li class="nav-item">
                     <a href="/" class="nav-link">HOME</a>
                </li>
+               <!-- Pages -->
                <li class="nav-item">
                     <a href="/games" class="nav-link">GAMES</a>
                </li>
@@ -43,6 +39,7 @@
                     <a href="/leaderboard" class="nav-link">LEADERBOARD</a>
                </li>
           </ul>
+          <!-- Responsive hamburger -->
           <div class="hamburger">
                <span class="bar"></span>
                <span class="bar"></span>
@@ -51,14 +48,12 @@
      </nav>
 </header>
 
-
 <body>
-
      <div class="container">
           <h1 id="playerText">Tic Tac Toe</h1>
           <p>(x starts)</p>
           <button id="restartBtn">Restart</button>
-
+          <!-- Gameboard -->
           <div id="gameboard">
                <div class="box" id="0"></div>
                <div class="box" id="1"></div>
@@ -71,12 +66,9 @@
                <div class="box" id="8"></div>
           </div>
      </div>
-     
-     
-
 
      <script src="{% static 'js/cardgame-nav-bar.js' %}"></script>
-     <script  src="{% static 'js/tictactoe.js' %}"></script>
+     <script src="{% static 'js/tictactoe.js' %}"></script>
 </body>
 
 </html>

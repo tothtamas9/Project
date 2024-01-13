@@ -7,8 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="{% static 'img/retrogamesicon.png' %}" type="/x-icon">
-
-
     <link href="https://fonts.googleapis.com/css2?family=Handjet&family=Nova+Square&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
@@ -16,8 +14,8 @@
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"></script>
 
-        <link rel="stylesheet" href="{% static 'css/cardgame-nav-bar.css' %}">
-        <link rel="stylesheet" href="{% static 'css/eredmenytabla.css' %}">
+    <link rel="stylesheet" href="{% static 'css/cardgame-nav-bar.css' %}">
+    <link rel="stylesheet" href="{% static 'css/eredmenytabla.css' %}">
     <title>Eredménytábla</title>
 </head>
 
@@ -26,11 +24,11 @@
         <!--NAV BAR-->
         <nav class="navbar">
             <a href="/" class="nav-branding nav-link">retrogames.</a>
-
             <ul class="nav-menu">
                 <li class="nav-item">
                     <a href="/" class="nav-link">HOME</a>
                 </li>
+                <!-- Pages -->
                 <li class="nav-item">
                     <a href="/games" class="nav-link">GAMES</a>
                 </li>
@@ -38,6 +36,7 @@
                     <a href="/leaderboard" class="nav-link">LEADERBOARD</a>
                 </li>
             </ul>
+            <!-- Responsive hamburger -->
             <div class="hamburger">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -60,26 +59,24 @@
 
     <script>
         let table = document.getElementById("score_table")
-
-        
-
+        // API fetching
         fetch("/api/scores/")
-        .then(res => res.json())
-        .then(data => {
-            
-            data.forEach( score =>  {
-                console.log(data);
-                let d = new Date(score.date)
+            .then(res => res.json())
+            .then(data => {
 
-                table.innerHTML += `
+                data.forEach(score => {
+                    console.log(data);
+                    let d = new Date(score.date)
+
+                    table.innerHTML += `
                 <tr>
-                    <td>${ score.user.id }</td>
-                    <td>${ score.user.username }</td>
-                    <td>${ score.score_value}</td>
-                    <td>${ `${d.getFullYear()} - ${d.getMonth() + 1 } - ${d.getDay()}` }</td>
+                    <td>${score.user.id}</td>
+                    <td>${score.user.username}</td>
+                    <td>${score.score_value}</td>
+                    <td>${`${d.getFullYear()} - ${d.getMonth() + 1} - ${d.getDay()}`}</td>
                 </tr>`
+                })
             })
-        })
     </script>
 </body>
 

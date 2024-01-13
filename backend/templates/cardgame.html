@@ -7,16 +7,17 @@
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <link rel="icon" href="{% static 'img/retrogamesicon.png' %}" type="/x-icon">
-
+<!-- Fonts -->
      <link rel="preconnect" href="https://fonts.googleapis.com">
-     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-     <link href="https://fonts.googleapis.com/css2?family=Handjet&family=Nova+Square&display=swap" rel="stylesheet">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+     <link href="https://fonts.googleapis.com/css2?family=Handjet&family=Nova+Square&display=swap" rel="stylesheet"> 
+
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
      <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
           integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
           crossorigin="anonymous"></script>
-
+<!-- CSS -->
      <link rel="stylesheet" href="{% static 'css/cardgame-nav-bar.css' %}">
      <link rel="stylesheet" href="{% static 'css/cardgame.css' %}">
 
@@ -29,6 +30,7 @@
           <nav class="navbar">
                <a href="/" class="nav-branding nav-link">retrogames.</a>
                <ul class="nav-menu">
+                    <!-- Login / Signup -->
                     {% if user.is_anonymous %}
                     <li class="nav-item">
                          <a href="{% url 'login' %}" class="nav-link">LOG IN</a>
@@ -39,6 +41,7 @@
                          <a href="{% url 'logout' %}">LOG OUT</a>
                     </li>
                     {% endif %}
+                    <!-- Pages -->
                     <li class="nav-item">
                          <a href="/" class="nav-link">HOME</a>
                     </li>
@@ -49,6 +52,7 @@
                          <a href="/leaderboard" class="nav-link">LEADERBOARD</a>
                     </li>
                </ul>
+               <!-- Responsive hamburger -->
                <div class="hamburger">
                     <span class="bar"></span>
                     <span class="bar"></span>
@@ -57,14 +61,16 @@
           </nav>
      </header>
      <script src="{% static 'js/cardgame-nav-bar.js' %}"></script>
-
+     <!-- Picture -->
      <div class="section-1 box" style="display: flex;  justify-content: center; align-items: center;">
           <div class="mainTitle">
-
+               <!-- Welcome text if user is logged in -->
                {% if user.is_authenticated %}
                <h1>Hi {{ user.username }}!</h1>
                {% endif %}
+               <!-- Welcome text if user is not logged in -->
                {% if not user.is_authenticated %}
+               <!-- Animation text -->
                <div class="animated-text">
                     Dive into a world of <span></span>
                </div>
@@ -74,6 +80,7 @@
 
      <div class="section-2 box">
           <a href="/games">
+               <!-- Game suggestions -->
                <h1>FEATURED GAMES</h1>
           </a>
           {% if user.is_authenticated %}
@@ -88,7 +95,7 @@
                </a>
           </p>
      </div>
-
+     <!-- Picture -->
      <div class="section-3 box"></div>
 
      <div class="section-4 box">
@@ -101,13 +108,15 @@
                and we were tasked with creating a website that not only provides
                value but also meets a specific need.
           </p>
-          <p> While our initial idea
+          <p> 
+               While our initial idea
                was centered around games, the website has evolved into something
                more comprehensive. We believe we are making a mark in history,
                at least in our own history. If this is our first attempt,
                imagine what we could achieve over a lifetime of work.
-
+               
           </p>
+          <p>Contacts: raydan.r@gmail.com , ttamas026@gmail.com</p>
      </div>
 
 
