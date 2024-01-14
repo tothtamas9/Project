@@ -8,6 +8,10 @@
     font-family: Nova Square;
 }
 
+header{
+    z-index: 1;
+}
+
 .box {
     width: 100%;
     height: 600px;
@@ -100,6 +104,7 @@
     content: "Challenge";
     color: #ffffff;
     animation: words 20s infinite;
+    
 }
 
 .animated-text span::after {
@@ -111,6 +116,7 @@
     border-left: 2px solid #ffffff;
     right: -8px;
     animation: cursor .8s infinite, typing 20s steps(14) infinite;
+    padding-bottom: 50px;
 }
 
 @keyframes cursor {
