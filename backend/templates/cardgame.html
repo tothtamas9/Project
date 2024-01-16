@@ -38,7 +38,10 @@
                     </li>
                     {% else %}
                     <li class="nav-item">
-                         <a href="{% url 'logout' %}">LOG OUT</a>
+                         <form action="{% url 'logout' %}" method="post">
+                              {% csrf_token %}
+                              <input type="submit" value="LOG OUT">
+                         </form>
                     </li>
                     {% endif %}
                     <!-- Pages -->

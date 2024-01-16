@@ -1,5 +1,7 @@
 * {
     box-sizing: border-box;
+    color: black;
+    font-family: Nova Square;
 }
 
 :root {
@@ -10,6 +12,7 @@
 body {
     background-color: #004aad;
     color: var(--orange);
+
 }
 
 /* Title text */

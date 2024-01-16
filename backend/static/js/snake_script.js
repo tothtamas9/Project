@@ -12,7 +12,7 @@ let setIntervalId;
 let score = 0;
 
 // Get high score from local storage
-let highScore = localStorage.getItem("high-score") || 0;
+let highScore = 0;
 highScoreElement.innerText = `High Score: ${highScore}`;
 
 const updateFoodPosition = () => {
