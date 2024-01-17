@@ -29,6 +29,12 @@
           <a href="/" class="nav-branding nav-link">retrogames.</a>
           <ul class="nav-menu">
                <li class="nav-item">
+                    <form action="{% url 'logout' %}" method="post">
+                         {% csrf_token %}
+                         <input type="submit" value="LOG OUT">
+                    </form>
+               </li>
+               <li class="nav-item">
                     <a href="/" class="nav-link">HOME</a>
                </li>
                <!-- Pages -->

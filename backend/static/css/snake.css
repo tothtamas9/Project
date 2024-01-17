@@ -96,3 +96,13 @@ body {
         font-size: 1rem;
     }
 }
+
+/* Logout */
+input{
+    border: transparent;
+    background-color: transparent;
+}
+
+input:hover{
+    color: #ffffff;
+}

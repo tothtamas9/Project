@@ -80,3 +80,13 @@ button:hover {
     cursor: pointer;
     transform: translateY(-2px);
 }
+
+/* Logout */
+input{
+    border: transparent;
+    background-color: transparent;
+}
+
+input:hover{
+    color: #ffffff;
+}

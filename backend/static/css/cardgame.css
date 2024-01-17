@@ -159,3 +159,17 @@ header{
         width: calc(100% + 8px);
     }
 }
+
+/* Logout */
+input{
+    border: transparent;
+    background-color: transparent;
+}
+
+input:hover {
+    color: #ffffff;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
