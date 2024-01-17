@@ -47,8 +47,9 @@ button:hover {
      background-color: #38b6ff;
 }
 
-button a {
+#container a {
      color: #ffffff;
+     cursor: default;
 }
 
 /* Logout */
